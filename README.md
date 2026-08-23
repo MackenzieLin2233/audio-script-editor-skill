@@ -23,7 +23,7 @@ skills/
 The skill uses the standard `SKILL.md` Agent Skills format (a folder with `SKILL.md` plus supporting files), so it works in any agent that loads skills from a `SKILL.md` directory.
 
 ```bash
-git clone https://github.com/<your-user>/audio-script-editor-skill.git
+git clone https://github.com/MackenzieLin2233/audio-script-editor-skill.git
 cd audio-script-editor-skill
 ```
 
