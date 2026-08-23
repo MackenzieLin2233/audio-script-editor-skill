@@ -18,7 +18,9 @@ When the user provides English audio, produce only the requested essentials. Avo
 
 2. **Create HTML slides**
    - Generate an HTML slide deck, not `.pptx`.
-   - Use a simple, readable single-file HTML format unless the user asks otherwise.
+   - Build from the template library at `references/beautiful-html-templates/` (34 templates). Read its `index.json` for mood/tone metadata and its `AGENTS.md` for adaptation rules — preserve fonts, palette, layout, and decorations; replace placeholder content.
+   - **Never auto-select a template; the choice belongs to the user.** Before building slides, read `references/beautiful-html-templates/index.json`, present 3–5 fitting candidates (name + tagline, grouped by inferred tone), and ask the user which one to use. Wait for the answer, then build with that template. This overrides the library's `AGENTS.md` self-pick workflow (its "pick 3 candidates" step becomes "offer candidates, user decides").
+   - On Windows, open HTML files in the browser with `start <path>` (the library's `AGENTS.md` says `open <path>`, which is macOS-only).
    - Structure: hook → context → insight → examples → takeaway → action.
    - Keep each slide to one idea with concise text.
 
@@ -31,7 +33,7 @@ When the user provides English audio, produce only the requested essentials. Avo
 
 ## Default deliverables
 
-Use `references/output_templates.md` for HTML structure.
+Use `references/output_templates.md` for the minimal fallback structure and `references/beautiful-html-templates/` (template library) for slide decks.
 
 Default files:
 

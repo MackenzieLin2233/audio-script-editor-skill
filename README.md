@@ -5,7 +5,7 @@ An **Agent Skill** that turns English audio into a minimal HTML content package:
 ## What it produces
 
 - `transcript.md` — clean English transcript (filler removed, `[unclear]` marks for unclear audio)
-- `slides.html` — single-file HTML slide deck (hook → context → insight → examples → takeaway → action)
+- `slides.html` — HTML slide deck built from one of the 34 bundled templates (hook → context → insight → examples → takeaway → action); the user picks the template before it's built
 - `rednote.html` — native-Chinese Xiaohongshu/RedNote script (title options, hook, body, CTA, hashtags)
 
 ## Repo layout
@@ -16,6 +16,7 @@ skills/
     SKILL.md
     references/
       output_templates.md
+      beautiful-html-templates/   # 34-template slide library (see index.json)
 ```
 
 ## Install
