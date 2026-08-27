@@ -1,12 +1,12 @@
 # audio-editor
 
-An **Agent Skill** that turns English audio into a minimal HTML content package: a clean transcript, HTML slides, and a Chinese RedNote/Xiaohongshu script.
+An **Agent Skill** that turns English audio into a clean Word transcript, HTML slides, and a Chinese RedNote/Xiaohongshu script in Word.
 
 ## What it produces
 
-- `transcript.md` — clean English transcript (filler removed, `[unclear]` marks for unclear audio)
+- `transcript.docx` — clean English transcript in Word (filler removed, `[unclear]` marks for unclear audio); transcribed via faster-whisper `distil-small.en` (CPU, int8)
 - `slides.html` — HTML slide deck built from one of the 34 bundled templates (hook → context → insight → examples → takeaway → action); the user picks the template before it's built
-- `rednote.html` — native-Chinese Xiaohongshu/RedNote script (title options, hook, body, CTA, hashtags)
+- `rednote.docx` — native-Chinese Xiaohongshu/RedNote script in Word (title options, hook, body, CTA, hashtags)
 
 ## Repo layout
 
@@ -59,4 +59,9 @@ Any agent that reads `SKILL.md`-style skills: copy the `audio-editor` folder int
 
 ## Use
 
-Provide English audio and ask for the transcript, slides, and/or RedNote script. The skill produces only the requested essentials.
+Invoke the skill with an explicit audio file path, or let it auto-pick the most recently modified audio file from `D:\Audio Draft` (it confirms the file with you before processing).
+
+Workflow:
+
+1. **Transcribe + Word** — the skill produces `transcript.docx` and `rednote.docx`. No slides yet.
+2. **Slides** — after you edit `transcript.docx`, ask for slides. The skill reads the edited transcript and builds `slides.html`, one or two slides per H1 heading. You pick the template before it's built.

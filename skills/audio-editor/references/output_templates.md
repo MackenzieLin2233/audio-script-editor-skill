@@ -1,6 +1,8 @@
 # Output Templates
 
 > **Primary source for `slides.html`:** the template library at `references/beautiful-html-templates/` — 34 reusable templates. Read its `index.json` for mood/tone metadata and its `AGENTS.md` for adaptation rules. **Always ask the user which template to use before building; never auto-select.** The skeleton below is the minimal fallback only.
+>
+> **Delivery formats:** `transcript.docx` and `rednote.docx` are Word documents; `slides.html` is HTML. The rednote/transcript skeletons below describe their content structure only, not the file format.
 
 ## `slides.html`
 
